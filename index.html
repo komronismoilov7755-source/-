@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Змейка</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="topbar">
+    <h1 class="logo">ЗМЕЙКА<span class="dot">.</span></h1>
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-label">Счёт</span>
+        <span class="stat-value" id="score">0</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Рекорд</span>
+        <span class="stat-value" id="best">0</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="board-area">
+    <canvas id="board" width="480" height="480"></canvas>
+
+    <div class="overlay" id="overlay">
+      <div class="overlay-inner">
+        <h2 id="overlayTitle">Готовы?</h2>
+        <p id="overlayText">Собирайте красные точки, растите и не врезайтесь в себя и стены.</p>
+
+        <div class="level-picker">
+          <span class="level-label">Уровень</span>
+          <div class="level-buttons" id="levelButtons">
+            <button class="level-btn" data-level="1">1</button>
+            <button class="level-btn" data-level="2">2</button>
+            <button class="level-btn" data-level="3">3</button>
+            <button class="level-btn" data-level="4">4</button>
+            <button class="level-btn" data-level="5">5</button>
+          </div>
+        </div>
+
+        <button class="play-btn" id="playBtn">Играть</button>
+
+        <div class="hint">
+          <span class="kbd-hint">Стрелки / WASD</span>
+          <span class="swipe-hint">Или свайпы — на телефоне</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="controls-mobile" id="mobileControls">
+    <button class="pad-btn" id="btnUp" aria-label="Вверх">▲</button>
+    <div class="pad-row">
+      <button class="pad-btn" id="btnLeft" aria-label="Влево">◀</button>
+      <button class="pad-btn" id="btnDown" aria-label="Вниз">▼</button>
+      <button class="pad-btn" id="btnRight" aria-label="Вправо">▶</button>
+    </div>
+  </div>
+
+  <section class="leaderboard">
+    <h2 class="lb-title">Таблица рекордов</h2>
+    <ol class="lb-list" id="lbList">
+      <li class="lb-empty">Пока пусто — сыграйте первым</li>
+    </ol>
+  </section>
+
+  <footer class="footer">
+    <p>Сделано на HTML, CSS и JavaScript</p>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
